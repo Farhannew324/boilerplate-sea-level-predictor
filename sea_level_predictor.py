@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.stats import linregress
 
 def draw_plot():
-    # Read data from file
+    # Read data from the csv file
     df = pd.read_csv('epa-sea-level.csv')
 
     # Create scatter plot
@@ -23,7 +23,7 @@ def draw_plot():
     y_pred2 = res2.intercept + res2.slope * x_pred2
     plt.plot(x_pred2, y_pred2, 'green', label='Best Fit Line (2000–2050)')
 
-    # Add labels and title
+    # Add labels and title to the plot
     plt.xlabel('Year')
     plt.ylabel('Sea Level (inches)')
     plt.title('Rise in Sea Level')
